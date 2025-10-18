@@ -1,0 +1,201 @@
+body{
+  margin:0;
+   background-color:  #0f172a;;
+   font-family: Arial, sans-serif;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh; 
+   color: #cbd5e1;
+} 
+.card{
+   max-width:550px;
+   width: 90vw;
+    background-color: #1e293b;
+     border-radius: 16px;
+     padding:24px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+     display: flex;
+     flex-direction: column;
+     gap:20px;
+}
+.card-main{
+  display:flex;
+   gap:20px;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px;
+
+}
+.avtar{
+  width:90px;
+  height:90px;
+  font-size: 40px;
+  font-weight: bold;
+  color:black;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #60a5fa, #c084fc);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tech{
+   width:48px;
+   height:48px;
+   border-radius: 12px;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+   font-weight: 600;
+   background-color: #334155;
+  color: #e2e8f0;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  flex-grow: 1; /* Makes this column fill the available space */
+  text-align: left;
+}
+.right h1 {
+  margin: 0;
+  font-size: 24px;
+  color: white;
+}
+.right p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #94a3b8; /* Lighter subtitle color */
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header-right{
+  display:flex;
+  flex-direction: column;
+  gap:10px;
+  flex-shrink: 0;
+  align-items: flex-end;
+}
+.button-row {
+  display: flex;
+  gap: 8px; /* Space between the buttons in each row */
+}
+.btn{
+  font-size: 12px;
+  font-weight: 600;
+  border-radius:6px;
+  padding:8px 12px;
+  border:none;
+  cursor: pointer;
+}
+.email{
+  background: linear-gradient(to right, #3b82f6, #60a5fa);
+  color: white;
+}
+.linkedin {
+  background-color: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+.codeforces{
+    background: linear-gradient(to right, #3b82f6, #60a5fa);
+  color: white;
+}
+.geeksforgeeks{
+    background-color: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+}
+.lists{
+ display: flex;
+ flex-direction: column;
+ gap:10px;
+ font-size:14px;
+}
+.contact-items{
+  display: flex;
+  align-items: center;
+  gap:12px;
+}
+.contact-items i {
+  color: #94a3b8; /* Icon color */
+  width: 16px;
+  text-align: center;
+}
+.college{
+  display:inline-block;
+  font-size:12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background-color: #334155;
+  color: #e2e8f0;
+}
+.footer {
+  display: flex;
+  justify-content: space-between; /* Pushes items apart */
+  border-top: 1px solid #334155; /* Separator line */
+  padding-top: 16px;
+  font-size: 14px;
+}
+.footer strong {
+  color: white; /* Makes bold text white */
+  font-weight: 600;
+}
+.footer a {
+  color: #c084fc; /* Matches the avatar gradient */
+  text-decoration: none; /* Removes the underline */
+}
+
+@media (max-width: 600px) {
+
+  /* 1. Stack the avatar and the info vertically */
+  .card-main {
+    flex-direction: column;
+    align-items: center; /* Center the avatar/tech block */
+    gap: 25px;
+  }
+
+  /* 2. Stack the name and the buttons vertically */
+  .header {
+    flex-direction: column;
+    align-items: center; /* Center the name/button blocks */
+    gap: 20px;
+  }
+
+  /* 3. Center-align the name and title */
+  .header-left {
+    text-align: center;
+  }
+
+  /* 4. Center the 2x2 button grid */
+  .header-right {
+    justify-content: center;
+  }
+
+  /* 5. Center-align the contact list and tags */
+  .right {
+    align-items: center;
+  }
+  
+  /* 6. Make the contact list items align nicely */
+  .contact-items {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* 7. Stack the footer items */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+}
